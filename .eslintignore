@@ -1,0 +1,7 @@
+dist
+coverage
+storybook-static
+vite.config.ts
+postcss.config.js
+public
+tailwind.config.js
