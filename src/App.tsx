@@ -1,9 +1,9 @@
-import Home from './pages/Home';
 import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <main className='flex h-screen '>
+    <main className='h-screen '>
       <Routes>
         <Route index element={<Home />} />
       </Routes>

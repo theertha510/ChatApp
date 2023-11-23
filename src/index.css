@@ -9,3 +9,34 @@
   align-items: center;
   justify-content: center;
 }
+.message {
+  height: auto;
+  padding: 10px;
+  display: flex;
+}
+.message-content {
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  max-width: 220px;
+  background-color: #43a047;
+  border-radius: 5px;
+  color: white;
+  align-items: center;
+  padding: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+#you,
+#you .message-content,
+#you .message-meta {
+  justify-content: flex-end;
+}
+#other,
+#other .message-content,
+#other .message-meta {
+  justify-content: flex-start;
+}
+#other .message-content {
+  background-color: cornflowerblue;
+}

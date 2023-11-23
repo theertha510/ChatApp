@@ -5,6 +5,8 @@ export default {
     extend: {
       colors: {
         grey1: '#1C2129',
+        grey2: '#1A120B',
+        violet1: '#8583FF',
       },
     },
   },
