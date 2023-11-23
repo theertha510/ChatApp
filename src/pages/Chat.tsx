@@ -35,10 +35,17 @@ export const Chat: FC<ChatProps> = ({ socket, username, room }) => {
       setCurrentMessage('');
     }
   };
+
+  const handleReceiveMessage = (data: Message) => {
+    setMessageList((list) => [...list, data]);
+  };
+
   useEffect(() => {
-    socket.on('receive_message', (data) => {
-      setMessageList((list) => [...list, data]);
-    });
+    socket.on('receive_message', handleReceiveMessage);
+    return () => {
+      // Cleanup: remove the event listener when the component unmounts
+      socket.off('receive_message', handleReceiveMessage);
+    };
   }, [socket]);
 
   return (
